@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MyCalendar Demo</title>
+<link rel="stylesheet" href="css/style1.css" />
+<style>
+
+.mycalendar-datesinthismonth, .mycalendar-thisyear, .mycalendar-thismonth{ background:#cee;}
+.mycalendar-selectyear, .mycalendar-selectmonth{border:1px double #666}
+.mycalendar-today{ background:#9CC;}
+.mycalendar-overtd{ background:#B3B3B3;}
+
+</style>
+</head>
+
+<body>
+
+<script src="js/mycalendar.js"></script>
+<script type="text/javascript">
+	
+	MyCalendar.init({
+		state: "date",
+		onselect: function(){
+			console.log(MyCalendar.selectvalue)
+			},
+		language:"cn"
+	})
+			
+</script>
+</body>
+</html>

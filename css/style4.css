@@ -1,0 +1,13 @@
+table {
+	width: 250px;
+	padding: 0;
+	margin: 0;
+}
+
+td {
+	font:normal 12px/15px georgia;
+	color:#333;
+	padding:8px;
+	border-right:1px solid #f3f0e4;
+	border-bottom:1px solid #f3f0e4;
+}

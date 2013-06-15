@@ -1,0 +1,12 @@
+table {
+	border-spacing: 0;
+	font: normal .9em/1.4 "Lucida Grande","Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+	text-align: left;
+}
+
+tbody tr td {
+	background: #fff;
+	border-bottom: 1px solid #676767;
+	color: black;
+	padding: .34em  .5em;
+}
