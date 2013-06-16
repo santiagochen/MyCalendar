@@ -1,6 +1,6 @@
 /*
 * MyCalendar
-* version: 0.0.1
+* version: 0.0.2
 * Date: 06/13/2013
 * author: santiago chen
 * email: santiago1209@foxmail.com
@@ -14,8 +14,10 @@
 * MyCalendar.init({
 *	state: "month",
 *   onselect: function(){//do something},
-*	language:"cn"
+*	language:"cn",
+*   where:domElement
 *	})
+* where: append the calendar where;
 * state: state has three choices: date, or month, or year. Date-state is default(date); 
 * language: cn or en, default is en;
 * onselect: function(){}
@@ -56,6 +58,7 @@ var monthlength = [31,28,31,30,31,30,31,31,30,31,30,31],
 	curMonth = curDate.getMonth(),
 	language,
 	onselect,
+	where,
 	curState;
 
 MyCalendar.init=function(param){
@@ -64,12 +67,12 @@ MyCalendar.init=function(param){
 	MyCalendar.months =(language=="cn")?cnmonths:enmonths;
 	MyCalendar.days = (language=="cn")?cndays:endays;
 	
-	document.body.appendChild(buildwrap());
+	where = param.where||document.body;
+	where.appendChild(buildwrap());
 	
 	curState = param.state||"date";
 	utils.lighten(curState);
 	onselect = param.onselect||null;
-	
 	
 	/*START especially for makeup the missing indexOf function in IE8-*/
 	if(!Array.indexOf){
